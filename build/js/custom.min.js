@@ -2597,20 +2597,22 @@ if (typeof NProgress != 'undefined') {
 				Morris.Bar({
 				  element: 'graph_bar',
 				  data: [
-					{device: 'iPhone 4', geekbench: 380},
-					{device: 'iPhone 4S', geekbench: 655},
-					{device: 'iPhone 3GS', geekbench: 275},
-					{device: 'iPhone 5', geekbench: 1571},
-					{device: 'iPhone 5S', geekbench: 655},
-					{device: 'iPhone 6', geekbench: 2154},
-					{device: 'iPhone 6 Plus', geekbench: 1144},
-					{device: 'iPhone 6S', geekbench: 2371},
-					{device: 'iPhone 6S Plus', geekbench: 1471},
-					{device: 'Other', geekbench: 1371}
+					{device: 'Janeiro', total: 380},
+					{device: 'Fevereiro', total: 655},
+					{device: 'Março', total: 275},
+					{device: 'Abril', total: 1571},
+					{device: 'Maio', total: 655},
+					{device: 'Junho', total: 2154},
+					{device: 'Julho', total: 1144},
+					{device: 'Agosto', total: 2371},
+					{device: 'Setembro', total: 1471},
+					{device: 'Outubro', total: 1371},
+          {device: 'Novembro', total: 1371},
+          {device: 'Dezembro', total: 1371}
 				  ],
 				  xkey: 'device',
-				  ykeys: ['geekbench'],
-				  labels: ['Geekbench'],
+				  ykeys: ['total'],
+				  labels: ['Total'],
 				  barRatio: 0.4,
 				  barColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
 				  xLabelAngle: 35,
@@ -2625,21 +2627,23 @@ if (typeof NProgress != 'undefined') {
 				Morris.Bar({
 				  element: 'graph_bar_group',
 				  data: [
-					{"period": "2016-10-01", "licensed": 807, "sorned": 660},
-					{"period": "2016-09-30", "licensed": 1251, "sorned": 729},
-					{"period": "2016-09-29", "licensed": 1769, "sorned": 1018},
-					{"period": "2016-09-20", "licensed": 2246, "sorned": 1461},
-					{"period": "2016-09-19", "licensed": 2657, "sorned": 1967},
-					{"period": "2016-09-18", "licensed": 3148, "sorned": 2627},
-					{"period": "2016-09-17", "licensed": 3471, "sorned": 3740},
-					{"period": "2016-09-16", "licensed": 2871, "sorned": 2216},
-					{"period": "2016-09-15", "licensed": 2401, "sorned": 1656},
-					{"period": "2016-09-10", "licensed": 2115, "sorned": 1022}
-				  ],
+					{"period": "Janeiro", "2020": 807, "2019": 660},
+					{"period": "Fevereiro", "2020": 1251, "2019": 729},
+					{"period": "Março", "2020": 1769, "2019": 1018},
+					{"period": "Abril", "2020": 2246, "2019": 1461},
+					{"period": "Maio", "2020": 2657, "2019": 1967},
+					{"period": "Junho", "2020": 3148, "2019": 2627},
+					{"period": "Julho", "2020": 3471, "2019": 3740},
+					{"period": "Agosto", "2020": 2871, "2019": 2216},
+					{"period": "Setembro", "2020": 2401, "2019": 1656},
+					{"period": "Outubro", "2020": 2115, "2019": 1022},
+          {"period": "Novembro", "2020": 2115, "2019": 1022},
+          {"period": "Dezembro", "2020": 2115, "2019": 1022}
+          ],
 				  xkey: 'period',
 				  barColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
-				  ykeys: ['licensed', 'sorned'],
-				  labels: ['Licensed', 'SORN'],
+				  ykeys: ['2020', '2019'],
+				  labels: ['2020', '2019'],
 				  hideHover: 'auto',
 				  xLabelAngle: 60,
 				  resize: true
@@ -2652,16 +2656,24 @@ if (typeof NProgress != 'undefined') {
 				Morris.Bar({
 				  element: 'graphx',
 				  data: [
-					{x: '2015 Q1', y: 2, z: 3, a: 4},
-					{x: '2015 Q2', y: 3, z: 5, a: 6},
-					{x: '2015 Q3', y: 4, z: 3, a: 2},
-					{x: '2015 Q4', y: 2, z: 4, a: 5}
+					{mes: 'Janeiro', app: 234, site: 353, local: 432},
+					{mes: 'Fevereiro', app: 331, site: 532, local: 652},
+					{mes: 'Março', app: 432, site: 332, local: 232},
+					{mes: 'Abril', app: 232, site: 432, local: 532},
+          {mes: 'Maio', app: 232, site: 432, local: 532},
+          {mes: 'Junho', app: 232, site: 432, local: 532},
+          {mes: 'Julho', app: 232, site: 432, local: 532},
+          {mes: 'Agosto', app: 232, site: 432, local: 532},
+          {mes: 'Setembro', app: 232, site: 432, local: 532},
+          {mes: 'Outubro', app: 232, site: 432, local: 532},
+          {mes: 'Novembro', app: 232, site: 432, local: 532},
+          {mes: 'Dezembro', app: 232, site: 432, local: 532}
 				  ],
-				  xkey: 'x',
-				  ykeys: ['y', 'z', 'a'],
+				  xkey: 'mes',
+				  ykeys: ['app', 'site', 'local'],
 				  barColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
 				  hideHover: 'auto',
-				  labels: ['Y', 'Z', 'A'],
+				  labels: ['Aplicativo', 'Site', 'Direto na unidade'],
 				  resize: true
 				}).on('click', function (i, row) {
 					console.log(i, row);
@@ -2701,12 +2713,11 @@ if (typeof NProgress != 'undefined') {
 				Morris.Donut({
 				  element: 'graph_donut',
 				  data: [
-					{label: 'Jam', value: 25},
-					{label: 'Frosted', value: 40},
-					{label: 'Custard', value: 25},
-					{label: 'Sugar', value: 10}
+					{label: 'Unidade', value: 40},
+					{label: 'Site', value: 25},
+					{label: 'App', value: 35}
 				  ],
-				  colors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
+				  colors: ['#26B99A', '#34495E', '#ACADAC'],
 				  formatter: function (y) {
 					return y + "%";
 				  },
